@@ -1,140 +1,146 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        /* Color Palette */
-        :root {
-            --beige: #f5f1e8;
-            --brown: #5a4634;
-            --white: #ffffff;
-            --black: #1a1a1a;
-            --grey: #7a7a7a;
-            --sage: #a8b6a3;
-            --twilight-blue: #5d6d7e;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<style>
+    :root {
+        --beige: #f5f1e8;
+        --brown: #5a4634;
+        --white: #ffffff;
+        --black: #1a1a1a;
+        --grey: #7a7a7a;
+        --sage: #a8b6a3;
+        --twilight-blue: #5d6d7e;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
-            background-color: var(--beige);
-            color: var(--black);
-            line-height: 1.6;
-        }
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--beige);
+        color: var(--black);
+    }
 
-        header {
-            background: var(--sage);
-            padding: 2rem;
-            text-align: center;
-            color: var(--white);
-        }
+    header {
+        position: relative;
+        text-align: center;
+        padding: 4rem 1rem 6rem;
+        background: var(--sage);
+        color: var(--white);
+        border-bottom-left-radius: 50% 8%;
+        border-bottom-right-radius: 50% 8%;
+        overflow: hidden;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    header img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--white);
+        margin-top: 1rem;
+    }
 
-        header p {
-            font-size: 1.2rem;
-            color: var(--white);
-        }
+    header h1 {
+        font-size: 2.5rem;
+        margin: 1rem 0 0.5rem;
+    }
 
-        main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+    header p {
+        max-width: 500px;
+        margin: auto;
+        font-size: 1.1rem;
+    }
 
-        section {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
+    /* Decorative doodles */
+    .doodle {
+        position: absolute;
+        opacity: 0.15;
+    }
+    .doodle.star {
+        top: 10%;
+        left: 5%;
+        font-size: 3rem;
+    }
+    .doodle.wave {
+        bottom: 15%;
+        right: 8%;
+        font-size: 4rem;
+    }
 
-        h2 {
-            color: var(--brown);
-            margin-bottom: 1rem;
-        }
+    main {
+        max-width: 1100px;
+        margin: -3rem auto 3rem;
+        padding: 0 1rem;
+    }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
+    section {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+    }
 
-        .project-card {
-            background: var(--beige);
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s ease;
-        }
+    h2 {
+        font-size: 1.8rem;
+        color: var(--brown);
+        margin-bottom: 1rem;
+        position: relative;
+    }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
+    /* Projects grid with images */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
 
-        .project-card h3 {
-            margin-top: 0;
-            color: var(--twilight-blue);
-        }
+    .project-card {
+        background: var(--beige);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease;
+    }
 
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--grey);
-            color: var(--white);
-            margin-top: 3rem;
-        }
-    </style>
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .project-card div {
+        padding: 1rem;
+    }
+
+    .project-card h3 {
+        margin-top: 0;
+        color: var(--twilight-blue);
+    }
+
+    /* Experience list */
+    .experience-list li {
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: var(--grey);
+        color: var(--white);
+        border-top-left-radius: 50% 8%;
+        border-top-right-radius: 50% 8%;
+    }
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>Your Name Here</h1>
-        <p>Short bio about you — your skills, passions, or what you’re working on.</p>
-    </header>
-
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Write a few sentences here about who you are, your background, and your goals.
-                This is where you can highlight your personality and what makes you unique.
-            </p>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Project Title 1</h3>
-                    <p>Short description of your project, what you did, and the impact.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Project Title 2</h3>
-                    <p>Short description of your project, what you did, and the impact.</p>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Job/Role</strong> – Company/Organization – Date</li>
-                <li><strong>Job/Role</strong> – Company/Organization – Date</li>
-                <!-- Add more experiences as needed -->
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        &copy; 2025 Your Name. All rights reserved.
-    </footer>
-
-</body>
-</html>
+<header
