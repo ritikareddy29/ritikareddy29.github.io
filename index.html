@@ -11,53 +11,58 @@
       --white: #ffffff;
       --black: #1a1a1a;
       --grey: #696565;
-      --sage: #505C4C;
-      --twilight-blue: #485A6E;
+      --sage: #6b7763;
+      --terracotta: #d07d57;
+      --accent: #c3a995;
     }
 
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       background-color: var(--beige);
       color: var(--black);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* Hero / Header */
+    /* HEADER */
     header {
-      background: linear-gradient(135deg, var(--sage), var(--twilight-blue));
-      padding: 3rem 1rem 5rem;
-      text-align: center;
+      background: linear-gradient(135deg, var(--sage), var(--terracotta));
       color: var(--white);
+      text-align: center;
+      padding: 3rem 1rem 4rem;
       position: relative;
-      border-bottom-left-radius: 50% 8%;
-      border-bottom-right-radius: 50% 8%;
-    }
-
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--white);
-      margin-top: 1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border-bottom-left-radius: 60% 10%;
+      border-bottom-right-radius: 60% 10%;
     }
 
     header h1 {
-      font-size: 2.7rem;
-      margin: 1rem 0 0.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     header p {
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
+      max-width: 650px;
+      margin: 0 auto;
     }
 
+    /* PROFILE PIC */
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid var(--white);
+      object-fit: cover;
+      margin-top: -70px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    /* MAIN */
     main {
       max-width: 1000px;
-      margin: -3rem auto 3rem;
+      margin: 2rem auto;
       padding: 0 1rem;
     }
 
@@ -65,124 +70,133 @@
       background: var(--white);
       border-radius: 20px;
       padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 120px;
+      height: 120px;
+      background: var(--accent);
+      border-radius: 50%;
+      opacity: 0.15;
     }
 
     h2 {
       color: var(--brown);
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      border-bottom: 2px solid var(--beige);
-      display: inline-block;
-      padding-bottom: 0.3rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.7rem;
+      border-left: 6px solid var(--terracotta);
+      padding-left: 12px;
     }
 
-    /* Projects Grid */
+    /* PROJECTS */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1.5rem;
     }
 
     .project-card {
       background: var(--beige);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 16px;
+      padding: 1.2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+      position: relative;
     }
 
     .project-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-
-    .project-card div {
-      padding: 1rem;
     }
 
     .project-card h3 {
-      margin: 0 0 0.5rem;
-      color: var(--twilight-blue);
+      margin-top: 0;
+      color: var(--terracotta);
+      font-size: 1.3rem;
     }
 
-    /* Contact Section */
-    .contact-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
+    /* CONTACT LINKS */
+    ul {
+      list-style: none;
+      padding-left: 0;
     }
 
-    .contact-links a {
-      background: var(--twilight-blue);
-      color: var(--white);
-      padding: 0.6rem 1.2rem;
-      border-radius: 30px;
+    li {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: var(--sage);
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s ease;
-      display: inline-block;
+      transition: color 0.2s ease;
     }
 
-    .contact-links a:hover {
-      background: var(--sage);
+    a:hover {
+      color: var(--terracotta);
+      text-decoration: underline;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 1.5rem;
-      background: var(--grey);
+      background: var(--sage);
       color: var(--white);
-      border-top-left-radius: 50% 8%;
-      border-top-right-radius: 50% 8%;
       margin-top: 3rem;
+      border-top-left-radius: 50% 10%;
+      border-top-right-radius: 50% 10%;
     }
+
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://via.placeholder.com/150" alt="Profile photo">
     <h1>Ritika Reddy</h1>
-    <p>Hi! I’m a junior in high school interested in combining finance, tech, and computer science. I’m constantly seeking opportunities to learn, build, and create impactful projects.</p>
+    <p>Hi! I’m a junior interested in blending finance, tech, and computer science to build innovative projects and make real-world impact.</p>
   </header>
 
   <main>
+    <div style="text-align:center;">
+      <img src="https://via.placeholder.com/150" alt="Ritika's Photo" class="profile-pic">
+    </div>
+
     <section>
       <h2>About Me</h2>
-      <p>
-        I am a high school student with strong skills in finance, computer science, and data analysis. My experience spans competitive academic teams, 
-        leadership roles, and technical projects that combine strategy with innovation. I have an intermediate background in tools such as Excel, Python, Java, HTML, 
-        CSS, and React Native. I am committed to expanding my expertise and applying my skills to real-world challenges.
-      </p>
+      <p>I am a high school student with strong skills in finance, computer science, and data analysis. My experience spans competitive academic teams, leadership roles, and technical projects that combine strategy with innovation. I have experience with Excel, Python, Java, HTML, CSS, and React Native. I am committed to expanding my expertise and applying my skills to real-world challenges while continuing to grow and learn.</p>
     </section>
 
     <section>
       <h2>Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <img src="https://via.placeholder.com/400x250" alt="Project Image">
-          <div>
-            <h3>SunSentry</h3>
-            <p>Designed an app that uses user data to create a personalized skin care plan to help prevent skin cancer and promote skin health. Built in React Native with a custom wireframe.</p>
-          </div>
+          <h3>SunSentry</h3>
+          <p>App designed in ReactNative that creates personalized skin care plans to help prevent skin cancer. Includes user-driven data insights and a custom wireframe design.</p>
         </div>
         <div class="project-card">
-          <img src="https://via.placeholder.com/400x250" alt="Project Image">
-          <div>
-            <h3>Project Title 2</h3>
-            <p>Short description of your project, what you did, and the impact.</p>
-          </div>
+          <h3>Project Title 2</h3>
+          <p>Short description of your project, what you did, and the impact.</p>
         </div>
       </div>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <p>Let’s connect 🌿</p>
+      <ul>
+        <li>📧 <a href="mailto:ritikareddy@gmail.com" target="_blank">Gmail</a></li>
+        <li>💼 <a href="https://www.linkedin.com/in/ritika-reddy-7185082b5/">LinkedIn</a></li>
+        <li>📄 <a href="https://docs.google.com/document/d/e/2PACX-1vQ81qBgJASMrpJN880eHnR798LTs-JqMRX5OUgQG7YUCXlLBF11YYFGdSEaGL0NJoIsE18RGb8kl0Lt/pub">View My Resume</a></li>
+      </ul>
     </section>
 
     <section>
@@ -191,20 +205,10 @@
         <li><strong>Academic Tutor & Front Desk</strong> – Kumon Math & Reading – Feb–Aug 2025</li>
       </ul>
     </section>
-
-    <section>
-      <h2>Contact Me</h2>
-      <p>Let’s connect!</p>
-      <div class="contact-links">
-        <a href="mailto:ritikareddy@gmail.com" target="_blank">📧 Gmail</a>
-        <a href="https://www.linkedin.com/in/ritika-reddy-7185082b5/" target="_blank">💼 LinkedIn</a>
-        <a href="https://docs.google.com/document/d/e/2PACX-1vQ81qBgJASMrpJN880eHnR798LTs-JqMRX5OUgQG7YUCXlLBF11YYFGdSEaGL0NJoIsE18RGb8kl0Lt/pub" target="_blank">📄 Resume</a>
-      </div>
-    </section>
   </main>
 
   <footer>
-    &copy; 2025 Ritika Reddy. All rights reserved.
+    &copy; 2025 Ritika Reddy 🌸 All rights reserved.
   </footer>
 
 </body>
