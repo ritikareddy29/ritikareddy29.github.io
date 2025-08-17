@@ -1,167 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritika Reddy - My Portfolio</title>
-    <style>
-        :root {
-            --beige: #f5f1e8;
-            --brown: #3B2C20;
-            --white: #ffffff;
-            --black: #1a1a1a;
-            --grey: #696565;
-            --sage: #505C4C;
-            --twilight-blue: #485A6E;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritika Reddy - Portfolio</title>
+  <style>
+    :root {
+      --beige: #f5f1e8;
+      --brown: #3B2C20;
+      --white: #ffffff;
+      --black: #1a1a1a;
+      --grey: #696565;
+      --sage: #505C4C;
+      --twilight-blue: #485A6E;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
-            background-color: var(--beige);
-            color: var(--black);
-            line-height: 1.6;
-        }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--beige);
+      color: var(--black);
+      line-height: 1.6;
+    }
 
-        header {
-            background: var(--sage);
-            padding: 2rem;
-            text-align: center;
-            color: var(--white);
-        }
+    /* Hero / Header */
+    header {
+      background: linear-gradient(135deg, var(--sage), var(--twilight-blue));
+      padding: 3rem 1rem 5rem;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+      border-bottom-left-radius: 50% 8%;
+      border-bottom-right-radius: 50% 8%;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--white);
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
 
-        header p {
-            font-size: 1.2rem;
-            color: var(--white);
-        }
+    header h1 {
+      font-size: 2.7rem;
+      margin: 1rem 0 0.5rem;
+    }
 
-        main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
 
-        section {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
+    main {
+      max-width: 1000px;
+      margin: -3rem auto 3rem;
+      padding: 0 1rem;
+    }
 
-        h2 {
-            color: var(--brown);
-            margin-bottom: 1rem;
-        }
+    section {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
+    h2 {
+      color: var(--brown);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--beige);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
 
-        .project-card {
-            background: var(--beige);
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s ease;
-        }
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
+    .project-card {
+      background: var(--beige);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-        .project-card h3 {
-            margin-top: 0;
-            color: var(--twilight-blue);
-        }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
 
-        a {
-    color: var(--twilight-blue);
-    text-decoration: none;
-    font-weight: bold;
-}
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    .project-card div {
+      padding: 1rem;
+    }
 
+    .project-card h3 {
+      margin: 0 0 0.5rem;
+      color: var(--twilight-blue);
+    }
 
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--grey);
-            color: var(--white);
-            margin-top: 3rem;
-        }
-    </style>
+    /* Contact Section */
+    .contact-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .contact-links a {
+      background: var(--twilight-blue);
+      color: var(--white);
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+
+    .contact-links a:hover {
+      background: var(--sage);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--grey);
+      color: var(--white);
+      border-top-left-radius: 50% 8%;
+      border-top-right-radius: 50% 8%;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Ritika Reddy</h1>
-        <p>Hi! I’m a current junior in high school student interested in combining finance, tech, and computer science. I’m constantly seeking opportunities to learn, build, and create impactful projects.
-</p>
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Profile photo">
+    <h1>Ritika Reddy</h1>
+    <p>Hi! I’m a junior in high school interested in combining finance, tech, and computer science. I’m constantly seeking opportunities to learn, build, and create impactful projects.</p>
+  </header>
 
-    </header>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a high school student with strong skills in finance, computer science, and data analysis. My experience spans competitive academic teams, 
+        leadership roles, and technical projects that combine strategy with innovation. I have an intermediate background in tools such as Excel, Python, Java, HTML, 
+        CSS, and React Native. I am committed to expanding my expertise and applying my skills to real-world challenges.
+      </p>
+    </section>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>
-               I am a high school student with strong skills in finance, computer science, and data analysis. My experience spans competitive academic teams, 
-                leadership roles, and technical projects that combine strategy with innovation. I have a intermediate background in tools such as Excel, Python, Java, HTML, 
-                CSS, and ReactNative. I am committed to expanding my expertise and applying my skills to real-world challenges and continuing growing and learning.
-            </p>
-        </section>
+    <section>
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x250" alt="Project Image">
+          <div>
+            <h3>SunSentry</h3>
+            <p>Designed an app that uses user data to create a personalized skin care plan to help prevent skin cancer and promote skin health. Built in React Native with a custom wireframe.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x250" alt="Project Image">
+          <div>
+            <h3>Project Title 2</h3>
+            <p>Short description of your project, what you did, and the impact.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>SunSentry</h3>
-                    <p>Designed an app that uses user data + information to create a personalized skin care plan to help prevent skin cancer and promote skin health. Coded in ReactNative and made the wireframe for the app.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Project Title 2</h3>
-                    <p>Short description of your project, what you did, and the impact.</p>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </section>
-        <section>
-            <h2>Contact Me</h2>
-            <p>Reach out whenever!</p>
-            <ul style="list-style: none; padding-left: 0; font-size: 1.1rem;">
-                <li>
-                    📧 <a href="mailto:ritikareddy@gmail.com" target="_blank">Gmail</a>
-                </li>
-                <li>
-                    💼 <a href="https://www.linkedin.com/in/ritika-reddy-7185082b5/">LinkedIn</a>
-                </li>
-                <li>
-                    📄 <a href="https://docs.google.com/document/d/e/2PACX-1vQ81qBgJASMrpJN880eHnR798LTs-JqMRX5OUgQG7YUCXlLBF11YYFGdSEaGL0NJoIsE18RGb8kl0Lt/pub">View My Resume</a>
-                </li>
-            </ul>
-        </section>
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Academic Tutor & Front Desk</strong> – Kumon Math & Reading – Feb–Aug 2025</li>
+      </ul>
+    </section>
 
-        <section>
-            <h2>Experience</h2>
-            <ul>
-                <li><strong> Academic Tutor for advanced topics & Front Desk </strong> – Kumon Math&Reading – Feb-Aug 2025 </li>
-            </ul>
-        </section>
-    </main>
+    <section>
+      <h2>Contact Me</h2>
+      <p>Let’s connect!</p>
+      <div class="contact-links">
+        <a href="mailto:ritikareddy@gmail.com" target="_blank">📧 Gmail</a>
+        <a href="https://www.linkedin.com/in/ritika-reddy-7185082b5/" target="_blank">💼 LinkedIn</a>
+        <a href="https://docs.google.com/document/d/e/2PACX-1vQ81qBgJASMrpJN880eHnR798LTs-JqMRX5OUgQG7YUCXlLBF11YYFGdSEaGL0NJoIsE18RGb8kl0Lt/pub" target="_blank">📄 Resume</a>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        &copy; 2025 Ritika Reddy. All rights reserved.
-    </footer>
+  <footer>
+    &copy; 2025 Ritika Reddy. All rights reserved.
+  </footer>
 
 </body>
 </html>
